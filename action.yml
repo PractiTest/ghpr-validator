@@ -1,0 +1,9 @@
+name: 'GitHub PR validator'
+description: 'Validate the PR description conforms to provided pattern'
+inputs:
+  pattern:
+    description: 'A regex pattern to check the PR description'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
