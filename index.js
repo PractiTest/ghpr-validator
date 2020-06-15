@@ -9,7 +9,6 @@ try {
         github.context.payload &&
         github.context.payload.pull_request &&
         github.context.payload.pull_request.body;
-  core.info(prBody);
   const isValid = regex.test(prBody);
   if (!isValid) {
     core.setFailed(
@@ -19,5 +18,3 @@ try {
 } catch (error) {
   core.setFailed(error.message);
 }
-
-run();
